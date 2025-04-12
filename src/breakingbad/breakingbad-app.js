@@ -53,5 +53,6 @@ export const BreakingBadApp = async (el) => {
 
 // https://dog.ceo/api/breeds/image/random
 
+// curl -s "https://http://localhost:3001/users" | python -m json.tool
 //  curl -s "https://api.breakingbadquotes.xyz/v1/quotes" | python -m json.tool
 // curl -s "https://api.breakingbadquotes.xyz/v1/quotes/5" | python -m json.tool
