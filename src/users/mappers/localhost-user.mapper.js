@@ -10,6 +10,7 @@ export const localhostUserToModel = (localhostUser) => {
     avatar,
     balance,
     first_name,
+    // aca
     gender,
     id,
     isActive,
@@ -20,9 +21,11 @@ export const localhostUserToModel = (localhostUser) => {
     avatar,
     balance,
     firstName: first_name,
+    // -:aca
     gender,
     id,
     isActive,
     lastName: last_name,
   })
 }
+// Si el backend cambia de nombre un registro haz esto
