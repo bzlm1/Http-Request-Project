@@ -64,15 +64,18 @@ export const renderModal = (el, callback) => {
     const formData = new FormData(form);
     const userLike = { ...loadedUser };
     // formData.set("isActive", formData.has("isActive"));
+
+    // Acá extraemos el estado del checkbox manualmente
+    const isActiveCheckbox = form.querySelector('[name="isActive"]');
+    userLike.isActive = isActiveCheckbox.checked;
+
     for (const [key, value] of formData) {
       if (key === 'balance') {
         userLike[key] = +value;
         continue;
       }
-      if (key === 'isActive') {
-        userLike[key] = (value === 'on') ? true : false;
-        continue;
-      }
+      if (key === 'isActive') continue;
+      // userLike[key] = (value === 'on') ? true : false;
       userLike[key] = value;
     }
     // userLike['isActive'] - formData.get('isActive') ? true : false;
